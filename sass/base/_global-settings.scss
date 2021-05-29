@@ -1,0 +1,39 @@
+body {
+    font-family: Roboto;
+    font-size: 400;
+    color: $txt-main-color;
+}
+
+a{
+    text-decoration: none;
+    color: $txt-main-color;
+    transition: color 250ms $my-cubic,
+                background-color 250ms $my-cubic;
+    
+    &:hover, 
+    &.info:hover,
+    &:focus{
+        color: $global-blue;
+        outline: none;
+    }
+}
+
+ul{
+    @extend %no-indent;
+    list-style-type: none;
+}
+
+.zagolovok-iii-level{
+    margin-top: 0;
+    margin-bottom: 20px;
+    @include hiii($global-while);
+}
+
+.link-icon{                 //надстройка для SVG
+    fill: currentColor;   
+}
+
+.no-gap{                   //надстройка для картинок
+    display: block;
+}
+

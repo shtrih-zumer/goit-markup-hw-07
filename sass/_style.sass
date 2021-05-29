@@ -1,0 +1,312 @@
+/*Глобальні змінні*/
+:root{
+    --txt-main-color: rgb(33, 33, 33);      /*Основний колір тексту*/
+    --txt-content: rgb(117, 117, 117);      /*Додатковий колір тексту*/
+    --txt-black: rgb(00, 00, 00);           /*Чорний для тексту*/
+    --txt-bg-blue: rgb(33, 150, 243);       /*Блакитний для фону та тексту*/
+    --txt-bg-while: rgb(255, 255, 255);     /*Былий для фону та тексту*/
+    --bg-light-gray: rgb(245, 244, 250);    /*Світло сірий фон*/
+    --bg-dark-blue: rgb(47, 48, 58);        /*Темно синий фон*/
+    --txt-a-blinck: rgba(255, 255, 255, 0.6);
+
+    --bg-while-blinck: rgba(255, 255, 255, 0.1);
+    --bg-form-border: rgba(255, 255, 255, 0.3);
+}
+
+/*=*=*=*=*=*=*=*=*=*= Основні налаштування для сайту =*=*=*=*=*=*=*=*=*=*/
+body {
+    /*margin: 0;                              Зняття браузерного марджена, який складає 8px*/
+    font-family: Roboto;
+    font-size: 400;              /*Головний шрифт всього сойту*/
+    color: var(--text-main-color);              /* всьому тексту задаємо колір*/
+}
+
+a{
+    text-decoration: none;                      /*Прибираємо у ссилок підкреслення*/
+    color: var(--text-main-color);              /*Задаємо головний колір ссилкам*/
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+a:hover,
+a.info:hover,
+a:focus{
+    color: var(--txt-bg-blue);
+    outline: none;
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;                     /*Прибираємо маркер в списках*/
+}
+
+.no-gap{
+    display: block;
+}
+
+.sections{
+    padding-top: 94px;  
+    padding-bottom: 94px;
+    background-color: var(--txt-bg-while);
+}
+
+.sections:nth-child(2n){
+    background-color: var(--bg-light-gray);
+}
+
+.sections.no-padding{
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.zebra-bg-dark-b{
+    background-color: var(--bg-dark-blue);
+}
+
+.visible{
+    color: var(--txt-bg-blue);
+}
+
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1200px;
+    /*outline: 1px solid tomato;*/
+}
+
+/*=*=*=*=*=*=*=*=*=*= /Основні налаштування =*=*=*=*=*=*=*=*=*=*/
+
+/*========== Блок header==========*/
+
+/*=== Логотип ===*/
+.logotip-header{
+    font-family: 'Raleway', serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--txt-black);
+}
+
+.logo-first {
+    color: var(--txt-bg-blue);
+}
+/*=== /Логотип ===*/
+
+/*=== Навігація ===*/
+.main-nav{
+    display: flex;
+    align-items: center;
+
+}
+
+.site-nav{
+    display: flex;
+    margin-left: 93px;
+}
+
+.site-nav .item:not(:last-child){
+    margin-right: 50px;
+}
+
+.site-nav .item{
+    position: relative;
+}
+
+.menu.visible::after{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--txt-bg-blue);
+}
+
+.menu{
+    display: inline-block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    vertical-align: top;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+
+    /*outline: 1px solid red;*/
+}
+
+/*=== Контактні інфо ===*/
+.menu-cont{
+    display: flex;
+    align-items: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--txt-content);
+    font-style: normal;
+}
+
+/*=== /Контактні інфо ===*/
+
+.auth-nav{
+    display: flex;
+    margin-left: auto;
+}
+
+.auth-nav .item + .item{
+    margin-left: 50px;
+}
+/*=== /Навігація ===*/
+
+/*========== /Блок header==========*/
+
+/*========== Блок footer==========*/
+.logotip-footer{
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-family: 'Raleway', serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    color: var(--txt-bg-while);
+}
+
+.logotip-footer:hover{
+    color: var(--txt-bg-while);
+}
+
+.cont-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--txt-a-blinck);
+    font-style: normal;
+}
+
+.cont-text.link{
+    color: var(--txt-bg-while);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.cont-footer .item:not(:last-child){
+    margin-bottom: 9px;
+}
+
+.container.padding{
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.container.flex-cont{
+    display: flex;
+}
+
+.connect{
+    margin-left: 70px;
+    margin-right: auto;
+
+    /*outline: 1px solid greenyellow;*/
+}
+
+.zagolovok-iii-level{
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: var(--txt-bg-while);
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+.connect-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--bg-while-blinck);
+    color: var(--txt-bg-while);
+
+}
+
+.connect-link:hover, .connect-link:focus{
+    background-color: var(--txt-bg-blue);
+    color: var(--txt-bg-while);
+}
+
+.link-icon{
+    fill: currentColor;   
+}
+
+.connect-menu{
+    display: flex;
+}
+
+.connect-menu .item:not(:last-child){
+    margin-right: 10px;
+}
+/*========== /Блок footer==========*/
+
+/*========== Блок icon==========*/
+.a-icon{
+    fill: currentColor;
+    margin-right: 10px;
+}
+/*========== /Блок icon==========*/
+
+/*========== footer form==========*/
+.footer-form-mail{
+    height: 50px;
+    width: 358px;
+    border: 1px solid var(--bg-form-border);
+    background-color: var(--bg-dark-blue);
+    margin-right: 12px;
+    padding: 15px 16px;
+}
+
+.footer-form-button{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+    height: 50px;
+    background-color: var(--txt-bg-blue);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.07);
+    border-radius: 4px;
+    border: 1px solid transparent;
+
+    color: var(--txt-bg-while);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    letter-spacing: 0.06em;
+
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.footer-form-button .button-text{
+    margin-right: 10px;
+}
+
+.footer-form-button:hover, .footer-form-button:focus{
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+}
+/*========== /footer form==========*/

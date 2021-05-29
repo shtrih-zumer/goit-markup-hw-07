@@ -1,0 +1,9 @@
+@mixin hiii($color, $transform: uppercase) {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    color: $color;
+    font-style: normal;
+    text-transform: uppercase;
+}

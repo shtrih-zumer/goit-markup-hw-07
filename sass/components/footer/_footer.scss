@@ -1,0 +1,20 @@
+@import "./social-networks";
+
+.cont-text{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    letter-spacing: 0.03em;
+    color: var(--txt-a-blinck);
+    font-style: normal;
+
+    &.link{
+        @extend %no-indent;
+        color: $global-while;
+
+    }
+}
+
+.cont-footer .item:not(:last-child){
+    margin-bottom: 9px;
+}

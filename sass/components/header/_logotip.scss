@@ -1,0 +1,20 @@
+.logotip-header{
+    @extend %logo-text;
+    color: $global-black;
+}
+
+.logotip-footer{
+    @extend %logo-text;
+    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: $global-while;
+
+    &:hover{
+        color: $global-while;
+    }
+}
+
+.logo-first {
+    color: $global-blue;
+}

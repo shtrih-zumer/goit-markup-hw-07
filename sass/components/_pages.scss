@@ -1,0 +1,30 @@
+.sections{
+    padding-top: 94px;  
+    padding-bottom: 94px;
+    background-color: $global-while;
+
+    & :nth-child(2n){background-color: $bg-light-gray;}
+    &.no-padding{@extend %no-indent;}
+}
+
+.zebra-bg-dark-b{
+    background-color: $bg-dark-gray;
+}
+
+.visible{
+    color: $global-blue;
+}
+
+.container{
+    padding: 0 15px;
+    margin: 0 auto;
+    width: 1200px;
+
+    &.padding{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    &.flex-cont{
+        display: flex;
+    }
+}

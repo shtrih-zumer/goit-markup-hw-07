@@ -1,0 +1,29 @@
+.connect{
+    margin-left: 70px;
+    margin-right: auto;
+}
+
+.connect-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: $while-lucent10;
+    color: $global-while;
+
+    &:hover, &:focus{
+        background-color: $global-blue;
+        color: $global-while;
+    }
+}
+
+.connect-menu{
+    display: flex;
+
+    & .item:not(:last-child){
+        margin-right: 10px;
+    }
+}

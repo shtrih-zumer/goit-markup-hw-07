@@ -1,0 +1,160 @@
+:root{
+    --txt-content: rgb(117, 117, 117);      /*Додатковий колір тексту*/
+
+    --text-main-color: rgb(33, 33, 33);
+    --bg-while: rgb(245, 244, 250);
+    --text-txt-while: rgb(255, 255, 255);
+    --bg-blue: rgb(33, 150, 243);
+    --color-border: rgb(238, 238, 238);
+    
+}
+
+/*=*=*=*=*=*=*=*=*=*= Основні налаштування =*=*=*=*=*=*=*=*=*=*/
+button{
+    display: inline-block;
+
+    color: var(--txt-main-color);
+    background-color: var(--bg-light-gray);
+    font-family: inherit;                     /*Примусове наслідування свойства від боді*/
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em; 
+}
+
+button:hover, button:focus{
+    color: var(--txt-bg-while);
+    background-color: var(--txt-bg-blue);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+/*=*=*=*=*=*=*=*=*=*= /Основні налаштування =*=*=*=*=*=*=*=*=*=*/
+
+
+
+/*=== Готові роботи ===*/
+.work-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.worck-nav{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.work-button{
+    background-color: var(--bg-while);
+    padding: 6px 22px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+
+    border: 0;
+    border-radius: 4px;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), 
+                background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.worck-nav .item:not(:last-child){
+    margin-right: 8px;
+}
+
+.work-container .item{
+    flex-basis: calc(100% / 3 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.work-container .item:nth-child(3n){
+    margin-right: 0;
+}
+
+.work-container .item:nth-last-child(-n + 3){
+    margin-bottom: 0;
+}
+
+.work-title{
+    margin-top: 0;
+    margin-bottom: 4px;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+}
+
+.work-div-content{
+    padding: 20px 24px;
+    border: 1px solid var(--color-border);
+    border-top: 0;
+
+    box-shadow:0;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.work-content{
+    margin-top: 0;
+    margin-bottom: 0;
+    
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.8;
+    letter-spacing: 0.03em;
+    color: var(--txt-content);
+}
+
+.work-effekt{
+    position: relative;
+    overflow: hidden;
+}
+
+.work-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-blue);
+
+    transform: translateY( 100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.effekt-p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 322px;
+    transform: translate(-50%, -50%);
+    margin: 0;
+
+    font-style: normal;
+    font-size: 18px;
+    line-height: 1.55;
+    letter-spacing: 0.03em;
+    color: var(--text-txt-while);
+}
+
+.work-all:hover .work-div-content{
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+                0px 4px 4px rgba(0, 0, 0, 0.06), 
+                1px 4px 6px rgba(0, 0, 0, 0.16);
+
+}
+
+.work-title{
+    color: var(--text-main-color);
+}
+
+.work-all:hover .work-overlay,
+.work-all:focus .work-overlay{
+    transform: translateY(0);
+}

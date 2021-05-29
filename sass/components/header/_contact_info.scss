@@ -1,0 +1,11 @@
+.menu-cont{
+    @extend %text-style-clasic;
+    display: flex;
+    align-items: center;
+
+    padding-top: 32px;
+    padding-bottom: 32px;
+    
+    color: $txt-more-content;
+    font-style: normal;
+}
